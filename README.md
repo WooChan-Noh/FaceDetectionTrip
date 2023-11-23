@@ -16,20 +16,20 @@
 + Used Cam(Test) : Logitech C170
 + Used Local PC : Surface Pro7 (vertical)
 #### I used this projects
-+ OpenCVForUnity : https://github.com/EnoxSoftware/OpenCVForUnity (Use to faceDetection)
-+ Mediapipe-facemesh : https://github.com/apple2373/mediapipe-facemesh (Use to model generation)
++ OpenCVForUnity : [Original Github](https://github.com/EnoxSoftware/OpenCVForUnity) (Use to faceDetection)
++ Mediapipe-facemesh : [Original Github](https://github.com/apple2373/mediapipe-facemesh) (Use to model generation)
   > Thank you for allowing to use project! Special Thanks to **apple2373**
-+ Unity3D-Python-Communication : https://github.com/off99555/Unity3D-Python-Communication    
++ Unity3D-Python-Communication : [Original Github](https://github.com/off99555/Unity3D-Python-Communication)    
   (Use to socket communication between Unity-Python)
-+ Firebase (Official Guide) : https://firebase.google.com/docs/storage/unity/start
-+ ~(Not used) Reactor in Unity : https://github.com/WooChan-Noh/SDReactorUnity~
++ Firebase : [Official Guide](https://firebase.google.com/docs/storage/unity/start)
++ ~(Not used) Reactor in Unity : [Original Github](https://github.com/WooChan-Noh/SDReactorUnity)~
 ##### Preparation
 + You should have a folder `Photo`, `Facemesh` on your **Desktop**
   + `Facemesh` folder is ZIP file in this Project
 + Change Firebase URL (in `FirebaseManager.cs`)
 + Before use Facemesh, install python3.8.10 and check requirements.txt
 + Before you can run your Unity Editor or built app, you need to run `facemeshToObj.py` using the CLI. (in `facemesh` folder)
-  > Here's why : Check Issue and TroubleShooting - https://github.com/off99555/Unity3D-Python-Communication
+  > Here's why : Check Issue and TroubleShooting - [Original Github](https://github.com/off99555/Unity3D-Python-Communication)
 + Check your webcam connect in `WebCamera.cs`
 + Need Newton pakacge in Unity
 ## Learn more
@@ -52,8 +52,8 @@
 ###### SocketClient.cs
 + I made a few minor modifications to automate the process (means `facemeshToObj.py` in facemesh - not `SockeClient.cs`)    
  _(Renaming files, Changing paths, and Adding a few lines of code to communicate with Unity)_    
-_**PLEASE check out the original faecemesh project** : https://github.com/apple2373/mediapipe-facemesh_
-+ Communication code is almost identical to the referenced project : https://github.com/off99555/Unity3D-Python-Communication 
+_**PLEASE check out the original faecemesh project** : [Original Github](https://github.com/apple2373/mediapipe-facemesh)_
++ Communication code is almost identical to the referenced project : [Original Github](https://github.com/off99555/Unity3D-Python-Communication) 
 + Model generation results are stored in `facemesh/result`
 + Pass the name of the photo as a string to the Python program
 + Python program send a "model generation complete" message to Unity
