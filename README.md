@@ -27,14 +27,14 @@
 + You should have a folder `Photo`, `Facemesh` on your **Desktop**
   + `Facemesh` folder is ZIP file in this Project
 + Change Firebase URL (in `FirebaseManager.cs`)
-+ Before use Facemesh, install python3.8.10 and check requirements.txt
++ Before use `Facemesh`, install python3.8.10 and check requirements.txt
 + Before you can run your Unity Editor or built app, you need to run `facemeshToObj.py` using the CLI. (in `facemesh` folder)
   > Here's why : Check Issue and TroubleShooting - [Original Github](https://github.com/off99555/Unity3D-Python-Communication)
 + Check your webcam connect in `WebCamera.cs`
 + Need Newton pakacge in Unity
 ## Learn more
 + The original plan was included to use photos and Reactor to create AI photos and upload them to the server, but that was canceled.
-+ Facemesh generate three outputs : (texture(`.jpg`),`.mtl`,`.obj`)
++ `Facemesh` generate three outputs : (texture(`.jpg`),`.mtl`,`.obj`)
    + Those files must be in the **same** space, and if they are not named **Facemesh** _(Be careful with case)_, they will not be connected.
    + If you want to fix this problem, check out `facemeshToObj.py` 
 ###### WebCamera.cs   
@@ -48,16 +48,16 @@
 ###### FaceDetectorScene.cs  
 + Photos are saved to the desktop `Photo` folder (Check Preparation)
 + Change the UI based on take a photo conditions
-+ Enable communication when take a photo, and call upload method (only photo)
++ Enable communication when take a photo, and call `upload method` (only photo)
 ###### SocketClient.cs
-+ I made a few minor modifications to automate the process (means `facemeshToObj.py` in facemesh - not `SockeClient.cs`)    
++ I made a few minor modifications to automate the process (means `facemeshToObj.py` in `Facemesh` - not `SockeClient.cs`)    
  _(Renaming files, Changing paths, and Adding a few lines of code to communicate with Unity)_    
 _**PLEASE check out the original faecemesh project** : [Original Github](https://github.com/apple2373/mediapipe-facemesh)_
 + Communication code is almost identical to the referenced project : [Original Github](https://github.com/off99555/Unity3D-Python-Communication) 
 + Model generation results are stored in `facemesh/result`
 + Pass the name of the photo as a string to the Python program
 + Python program send a "model generation complete" message to Unity
-+ When you receive a message from Python, call upload method (Facemesh)
++ When you receive a message from Python, call `upload method` (Facemesh)
 ###### FirebaseManager.cs
 + Make it a singleton object and use it
 + All methods take a file format as a string (do not use "Reactor" format)
@@ -65,7 +65,7 @@ _**PLEASE check out the original faecemesh project** : [Original Github](https:/
 + Delete method deletes **all** files in Firebase
 + The upload/download methods will overwrite the file because the file name is fixed. 
    + If you want to keep the files separate, modify them by adding time to the name (This part is in `FaceDetectorScene.cs`).
-+ In Download method, call _`save to the desktop method`_ for test. You can use the **`byte fileData`** inside the code as you wish.(check the comments)
++ In Download method, call _`save to the desktop method`_ for test. You can use the **`byte fileData`** inside the code as you want.(check the comments)
 + If you already have a photo in Firebase, this program does not recognize faces. It was added for the exhibit, so delete it if you don't need it.
 ###### StableDiffusionReactor.cs
 + Not used
