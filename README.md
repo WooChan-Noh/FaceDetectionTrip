@@ -1,3 +1,5 @@
+[Read Me - English](https://github.com/WooChan-Noh/FaceDetectionTrip/blob/main/ReadMeEng.md)
+[Read Me - Japanese](https://github.com/WooChan-Noh/FaceDetectionTrip/blob/main/ReadMeJp.md)
 # FaceDetectionTrip
 + 전시회 "Trip"을 위한 얼굴 감지 프로그램입니다.
    + 예술x기술 융합 프로젝트 (참가 회사 및 스튜디오 : 타이니젬x길몽)   
