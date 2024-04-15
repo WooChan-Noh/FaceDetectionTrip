@@ -1,5 +1,8 @@
 # FaceDetectionTrip
 + FaceDetection Program for use in the exhibition **Trip**
+   + Art&technology convergence project (participating company and studio: Tinygem and Gilmong)
+   + It took place from November 19 to 25, 2023.
+   + It was held at 737.Point (Hupyeong-dong 737) on the 111th floor of Sakju-ro 206, Chuncheon-si, Gangwon-do.
 + UI resources are copyrighted by Tinygem
 + You can **ignore** the parts related to Reactor and Stable Diffusion
 ## Overview
@@ -34,7 +37,7 @@
 + Need Newton pakacge in Unity
 ## Learn more
 + The original plan was included to use photos and Reactor to create AI photos and upload them to the server, but that was canceled.
-+ `Facemesh` generate three outputs : (texture(`.jpg`),`.mtl`,`.obj`)
++ `Facemesh` generate three outputs : 1. texture(`.jpg`) 2`.mtl`  3`.obj`
    + Those files must be in the **same** space, and if they are not named **Facemesh** _(Be careful with case)_, they will not be connected.
    + If you want to fix this problem, check out `facemeshToObj.py` 
 ###### WebCamera.cs   
@@ -50,7 +53,7 @@
 + Change the UI based on take a photo conditions
 + Enable communication when take a photo, and call `upload method` (only photo)
 ###### SocketClient.cs
-+ I made a few minor modifications to automate the process (means `facemeshToObj.py` in `Facemesh` - not `SockeClient.cs`)    
+> I made a few minor modifications to automate the process (means `facemeshToObj.py` in `Facemesh` - not `SockeClient.cs`)    
  _(Renaming files, Changing paths, and Adding a few lines of code to communicate with Unity)_    
 _**PLEASE check out the original faecemesh project** : [Original Github](https://github.com/apple2373/mediapipe-facemesh)_
 + Communication code is almost identical to the referenced project : [Original Github](https://github.com/off99555/Unity3D-Python-Communication) 
