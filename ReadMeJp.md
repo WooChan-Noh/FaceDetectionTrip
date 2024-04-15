@@ -23,7 +23,7 @@
 #### I used this projects
 + OpenCVForUnity : [Original Github](https://github.com/EnoxSoftware/OpenCVForUnity) (顔検出に使用)
 + Mediapipe-facemesh : [Original Github](https://github.com/apple2373/mediapipe-facemesh) (モデル生成に使用)
-  > **apple2373**さんに使用を許可していただきました。 ありがとうございます！
+  > **apple2373**さんに使用を許可して頂きました。 ありがとうございます！
 + Unity3D-Python-Communication : [Original Github](https://github.com/off99555/Unity3D-Python-Communication)    
   (Unity-Pythonプログラム間のソケット通信)
 + Firebase : [Official Guide](https://firebase.google.com/docs/storage/unity/start)
@@ -79,7 +79,7 @@ _**Facemeshのオリジナルプロジェクトを参考してください**  [O
 + 使用しません。
 ### Known Issue
 + 顔が正しく撮影されず、モデル生成に失敗すると、Pythonプログラムが終了します。この場合、すべてのプログラムを終了し、最初からやり直してください。
-+ メモリリーク：ウェブカメラテクスチャのせいで発生すると思われます。メモリを直接管理していないから、時間が経つとメモリ問題が発生する可能性があります。
++ メモリリーク：ウェブカメラテクスチャのせいで発生すると思われます。メモリを直接管理していないので、時間が経つとメモリ問題が発生する可能性があります。
 + ~Reactor通信 : 通信が非同期で行われません。このプロジェクトは [SDReactorUnity](https://github.com/WooChan-Noh/SDReactorUnity)と同じ問題があります - Known Issue部分を確認してください~
 ***
 #### Photo and Facemesh Result
